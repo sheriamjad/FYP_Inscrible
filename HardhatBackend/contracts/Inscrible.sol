@@ -232,14 +232,6 @@ contract Inscrible {
         // Increment the tip amount
         allposts[_id-1].tipAmount += msg.value;
 
-    //    for(uint256 i = 0; i < singleUserPostList[msg.sender].length; i++){ 
-    //         if(singleUserPostList[msg.sender][i].id == _id){
-    //             singleUserPostList[msg.sender][i].tipAmount += msg.value;
-    //             //need to reviewCode
-    //             break;
-    //         }
-    //      } 
-
             for(uint256 i=0; i < userList[user].myPosts.length;i++){
                 if(userList[user].myPosts[i].id == _id){
                     userList[user].myPosts[i].tipAmount += msg.value;
